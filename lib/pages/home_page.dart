@@ -1,6 +1,7 @@
 import 'package:bwa_cozy/models/city.dart';
 import 'package:bwa_cozy/models/space.dart';
 import 'package:bwa_cozy/widget/city_card.dart';
+import 'package:bwa_cozy/widget/tips_card.dart';
 import 'package:flutter/material.dart';
 import 'package:bwa_cozy/theme.dart';
 import 'package:bwa_cozy/widget/space_card.dart';
@@ -111,48 +112,75 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              Column(
-                children: [
-                  SpaceCard(
-                    Space(
-                      id: 1,
-                      name: 'kontrakan pak camat',
-                      price: 500,
-                      city: 'Bekasi',
-                      country: 'Jawa Barat',
-                      imageUrl: 'assets/space1.png',
-                      rating: 4,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: edge),
+                child: Column(
+                  children: [
+                    SpaceCard(
+                      Space(
+                        id: 1,
+                        name: 'kontrakan pak camat',
+                        price: 500,
+                        city: 'Bekasi',
+                        country: 'Jawa Barat',
+                        imageUrl: 'assets/space1.png',
+                        rating: 4,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(
-                    Space(
-                      id: 2,
-                      name: 'kontrakan pak camat',
-                      price: 500,
-                      city: 'Karawang',
-                      country: 'Jawa Barat',
-                      imageUrl: 'assets/space2.png',
-                      rating: 5,
+                    SizedBox(
+                      height: 30,
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(
-                    Space(
-                      id: 3,
-                      name: 'kontrakan pak camat',
-                      price: 500,
-                      city: 'Cikarang',
-                      country: 'Jawa Barat',
-                      imageUrl: 'assets/space3.png',
-                      rating: 5,
+                    SpaceCard(
+                      Space(
+                        id: 2,
+                        name: 'kontrakan pak camat',
+                        price: 500,
+                        city: 'Karawang',
+                        country: 'Jawa Barat',
+                        imageUrl: 'assets/space2.png',
+                        rating: 5,
+                      ),
                     ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                        id: 3,
+                        name: 'kontrakan pak camat',
+                        price: 500,
+                        city: 'Cikarang',
+                        country: 'Jawa Barat',
+                        imageUrl: 'assets/space3.png',
+                        rating: 5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //note : tips area
+              SizedBox(
+                height: 25,
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Tips dan Petunjuk',
+                  style: regulerTextStyle.copyWith(
+                    fontSize: 16,
                   ),
-                ],
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: edge),
+                child: Column(
+                  children: [
+                    TipsCard(),
+                  ],
+                ),
               ),
             ],
           ),
